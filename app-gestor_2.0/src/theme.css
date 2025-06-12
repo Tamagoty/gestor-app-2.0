@@ -1,0 +1,99 @@
+/* src/theme.css */
+
+/*
+  Define as variáveis de cor e estilo para toda a aplicação.
+  Mudar um valor aqui afeta todos os componentes.
+*/
+:root {
+  /* Paleta de Cores */
+  --color-primary: #4f46e5;       /* Roxo/Azul principal */
+  --color-primary-hover: #4338ca;
+  --color-secondary: #10b981;     /* Verde para sucesso */
+  --color-danger: #ef4444;        /* Vermelho para perigo/exclusão */
+  --color-danger-hover: #dc2626;
+  --color-background: #f8fafc;    /* Fundo principal da página (cinza muito claro) */
+  --color-surface: #ffffff;       /* Fundo de cartões, modais, tabelas */
+  --color-text-primary: #1f2937;  /* Texto principal */
+  --color-text-secondary: #6b7280;/* Texto secundário, placeholders */
+  --color-border: #e5e7eb;        /* Cor das bordas */
+
+  /* Tipografia */
+  --font-family: 'Inter', sans-serif; /* Usaremos a fonte Inter, mais moderna */
+
+  /* Espaçamento e Bordas */
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --border-radius: 8px;
+  --box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+/* Estilos Globais para a aplicação */
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Estilização padrão para tabelas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--color-surface);
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  overflow: hidden; /* Garante que o border-radius funcione nas células */
+}
+
+th, td {
+  padding: var(--spacing-md);
+  text-align: left;
+  border-bottom: 1px solid var(--color-border);
+}
+
+th {
+  background-color: #f9fafb; /* Cinza um pouco mais escuro para o cabeçalho */
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* Estilização padrão para botões */
+button {
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: none;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  background-color: var(--color-primary);
+  color: white;
+}
+
+button:hover {
+  background-color: var(--color-primary-hover);
+}
+
+/* Estilização padrão para inputs e selects */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="date"],
+textarea,
+select {
+    padding: var(--spacing-sm);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    width: 100%; /* Ocupa o espaço disponível */
+    box-sizing: border-box; /* Garante que padding não aumente a largura */
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: 2px solid var(--color-primary);
+    border-color: transparent;
+}

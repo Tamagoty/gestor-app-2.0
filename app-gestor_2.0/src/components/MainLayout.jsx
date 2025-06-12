@@ -47,6 +47,14 @@ export default function MainLayout({ children }) {
           <Link to="/categories" style={navLinkStyle}>Categorias</Link>
           <Link to="/products" style={navLinkStyle}>Produtos</Link>
           <Link to="/merchants" style={navLinkStyle}>Clientes & Fornecedores</Link>
+          <Link to="/employees" style={navLinkStyle}>Funcionários</Link>
+          <Link to="/cost-centers" style={navLinkStyle}>Centros de Custo</Link>
+          <Link to="/expense-categories" style={navLinkStyle}>Cat. de Despesas</Link>
+          <Link to="/purchases" style={navLinkStyle}>Compras</Link>
+          <Link to="/sales" style={navLinkStyle}>Vendas</Link>
+          <Link to="/partners" style={navLinkStyle}>Sócios</Link>
+          <Link to="/expenses" style={navLinkStyle}>Despesas Gerais</Link>
+          <Link to="/reports" style={navLinkStyle}>Relatórios</Link>
           {/* Adicione outros links aqui no futuro */}
         </nav>
         <button onClick={handleLogout} style={{ marginTop: 'auto' }}>
