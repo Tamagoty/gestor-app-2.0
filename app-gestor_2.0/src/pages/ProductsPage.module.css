@@ -1,0 +1,45 @@
+/* src/pages/ProductsPage.module.css */
+
+.pageContainer {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.formContainer {
+  background-color: var(--color-surface);
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  margin-bottom: var(--spacing-lg);
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+.formActions {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.formActions button:nth-child(2) {
+    background-color: var(--color-text-secondary);
+}
+.formActions button:nth-child(2):hover {
+    background-color: var(--color-text-primary);
+}
+
+.actionsCell button:not(:first-child) {
+    margin-left: var(--spacing-sm);
+    background-color: var(--color-danger);
+}
+.actionsCell button:not(:first-child):hover {
+    background-color: var(--color-danger-hover);
+}
